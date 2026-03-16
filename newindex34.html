@@ -1,0 +1,48 @@
+```jsx
+import React from 'react';
+
+function App() {
+  return (
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4 overflow-hidden">
+      <div
+        className="
+          relative
+          w-80 h-80 sm:w-96 sm:h-96 md:w-[500px] md:h-[500px] lg:w-[700px] lg:h-[700px]
+          bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-700
+          rounded-full
+          flex items-center justify-center
+          shadow-2xl
+          transform-gpu
+          animate-spin
+        "
+      >
+        <div
+          className="
+            absolute
+            inset-0
+            rounded-full
+            bg-white bg-opacity-10
+            animate-ping
+          "
+        ></div>
+
+        <div
+          className="
+            relative
+            z-10
+            text-white
+            text-6xl sm:text-7xl md:text-8xl lg:text-9xl
+            font-extrabold
+            drop-shadow-lg
+            animate-pulse
+          "
+        >
+          BIG!
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+```

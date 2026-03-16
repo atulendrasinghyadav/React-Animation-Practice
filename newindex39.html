@@ -1,0 +1,50 @@
+```jsx
+import React from 'react';
+
+function BigAnimation() {
+  return (
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center overflow-hidden">
+      <div
+        className="
+          relative
+          w-[250px] h-[250px]
+          md:w-[450px] md:h-[450px]
+          lg:w-[600px] lg:h-[600px]
+          xl:w-[800px] xl:h-[800px]
+          bg-gradient-to-br from-purple-600 to-red-500
+          rounded-full
+          shadow-2xl
+          flex items-center justify-center
+          overflow-hidden
+
+          animate-[spin_20s_linear_infinite]
+        "
+      >
+        <div
+          className="
+            absolute
+            inset-0
+            bg-white bg-opacity-20
+            rounded-full
+            animate-[ping_4s_cubic-bezier(0,0,0.2,1)_infinite]
+          "
+        ></div>
+
+        <span
+          className="
+            text-white text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight
+            z-10
+            drop-shadow-2xl
+            select-none
+            animate-[pulse_3s_ease-in-out_infinite]
+          "
+        >
+          WOW!
+        </span>
+      </div>
+    </div>
+  );
+}
+
+export default BigAnimation;
+```

@@ -1,0 +1,77 @@
+```jsx
+import React from 'react';
+
+const BigAnimatedComponent = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
+      <div className="relative w-96 h-96 sm:w-[30rem] sm:h-[30rem] md:w-[40rem] md:h-[40rem]">
+        {/* Outermost Pulsing Layer */}
+        <div
+          className="
+            absolute inset-0
+            rounded-full
+            bg-purple-600
+            opacity-70
+            animate-pulse-slow
+            transform
+            duration-[4000ms]
+          "
+          style={{
+            animationIterationCount: 'infinite',
+            animationTimingFunction: 'cubic-bezier(0.4, 0, 0.6, 1)',
+            '--tw-pulse-scale-from': '1',
+            '--tw-pulse-scale-to': '1.1',
+          }}
+        ></div>
+
+        {/* Middle Pulsing Layer */}
+        <div
+          className="
+            absolute inset-8 sm:inset-10 md:inset-16
+            rounded-full
+            bg-pink-500
+            opacity-70
+            animate-pulse-slow
+            transform
+            duration-[4000ms]
+            delay-[1000ms]
+          "
+          style={{
+            animationIterationCount: 'infinite',
+            animationTimingFunction: 'cubic-bezier(0.4, 0, 0.6, 1)',
+            '--tw-pulse-scale-from': '1',
+            '--tw-pulse-scale-to': '1.1',
+          }}
+        ></div>
+
+        {/* Innermost Pulsing Layer with Text */}
+        <div
+          className="
+            absolute inset-16 sm:inset-20 md:inset-32
+            rounded-full
+            bg-red-400
+            opacity-70
+            animate-pulse-slow
+            transform
+            duration-[4000ms]
+            delay-[2000ms]
+            flex items-center justify-center
+            text-white text-4xl sm:text-5xl md:text-6xl font-extrabold text-center
+            shadow-xl
+          "
+          style={{
+            animationIterationCount: 'infinite',
+            animationTimingFunction: 'cubic-bezier(0.4, 0, 0.6, 1)',
+            '--tw-pulse-scale-from': '1',
+            '--tw-pulse-scale-to': '1.1',
+          }}
+        >
+          BIG <br /> ANIMATION
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BigAnimatedComponent;
+```

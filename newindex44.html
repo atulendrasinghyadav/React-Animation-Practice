@@ -1,0 +1,31 @@
+```jsx
+import React from 'react';
+
+const BigAnimatedBox = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-900 overflow-hidden">
+      <div
+        className="
+          w-[80vmin] h-[80vmin]
+          bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600
+          rounded-[30%] shadow-2xl
+          flex items-center justify-center
+          animate-[spin_10s_linear_infinite] animate-pulse
+        "
+      >
+        <div
+          className="
+            text-white text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight
+            transform -rotate-12
+            select-none
+          "
+        >
+          ANIMATION
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BigAnimatedBox;
+```

@@ -1,0 +1,25 @@
+```jsx
+import React from 'react';
+
+function BigAnimationComponent() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden p-4">
+      <div className="relative w-80 h-80 rounded-full bg-blue-600 flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-105">
+        {/* Inner core element with text */}
+        <div className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold z-20 pointer-events-none tracking-widest animate-pulse">
+          WOW
+        </div>
+        
+        {/* Ping animation layers */}
+        {/* z-10 to ensure ping layers are behind the "WOW" text but above the main circle */}
+        <span className="absolute inset-0 inline-flex h-full w-full rounded-full bg-blue-400 opacity-75 animate-ping z-10"></span>
+        <span className="absolute inset-0 inline-flex h-full w-full rounded-full bg-blue-500 opacity-75 animate-ping delay-500 z-10"></span>
+        <span className="absolute inset-0 inline-flex h-full w-full rounded-full bg-blue-600 opacity-75 animate-ping delay-1000 z-10"></span>
+        <span className="absolute inset-0 inline-flex h-full w-full rounded-full bg-blue-700 opacity-75 animate-ping delay-1500 z-10"></span>
+      </div>
+    </div>
+  );
+}
+
+export default BigAnimationComponent;
+```

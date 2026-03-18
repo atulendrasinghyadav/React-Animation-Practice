@@ -1,0 +1,68 @@
+```jsx
+import React from 'react';
+
+const BigAnimatedSquare = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-950 p-4">
+      <div className="
+        relative
+        w-80 h-80
+        md:w-96 md:h-96
+        lg:w-[500px] lg:h-[500px]
+        xl:w-[600px] xl:h-[600px]
+        bg-gradient-to-br from-purple-700 via-pink-600 to-red-500
+        rounded-3xl
+        shadow-2xl shadow-purple-900
+        flex items-center justify-center
+        overflow-hidden
+        group
+        transform transition-all duration-1000 ease-in-out
+        hover:scale-105 hover:rotate-3
+      ">
+        {/* Background pulsing and rotating effect */}
+        <div className="
+          absolute inset-0
+          bg-gradient-to-tr from-indigo-500 via-cyan-400 to-emerald-300
+          rounded-3xl
+          animate-[pulse_4s_ease-in-out_infinite]
+          opacity-70
+          group-hover:opacity-90
+          transition-opacity duration-700
+          scale-105
+        "></div>
+
+        <div className="
+          absolute inset-0
+          bg-gradient-to-bl from-blue-400 via-teal-300 to-green-200
+          rounded-full
+          animate-[spin_25s_linear_infinite]
+          opacity-30
+          w-full h-full
+          scale-150
+          group-hover:scale-[1.7]
+          transition-transform duration-1000
+        "></div>
+
+        {/* Main content with text and a subtle bounce */}
+        <div className="
+          relative z-10
+          text-white text-5xl md:text-7xl font-extrabold text-center
+          p-8
+          transform
+          group-hover:scale-110
+          group-hover:animate-[bounce_1s_ease-in-out_infinite]
+          transition-all duration-700 ease-out
+          drop-shadow-xl
+        ">
+          BIG
+          <span className="block text-3xl md:text-4xl font-normal mt-2">
+            Animation
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BigAnimatedSquare;
+```

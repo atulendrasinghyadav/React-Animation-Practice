@@ -1,0 +1,37 @@
+```jsx
+import React from 'react';
+
+const BigAnimation = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 flex items-center justify-center overflow-hidden p-4">
+      {/* Outer spinning container */}
+      <div className="
+        relative
+        w-96 h-96 md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px]
+        rounded-full
+        bg-gradient-to-br from-blue-400 via-purple-600 to-red-500
+        flex items-center justify-center
+        shadow-2xl
+        animate-[spin_15s_linear_infinite]
+        "
+      >
+        {/* Inner pulsating element */}
+        <div className="
+          w-3/4 h-3/4
+          rounded-full
+          bg-gradient-to-tl from-yellow-300 via-green-400 to-teal-500
+          flex items-center justify-center
+          text-5xl md:text-7xl lg:text-8xl font-extrabold text-white
+          shadow-xl
+          animate-[pulse_3s_ease-in-out_infinite]
+          "
+        >
+          WOW!
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BigAnimation;
+```

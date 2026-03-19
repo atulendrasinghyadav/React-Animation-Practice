@@ -1,0 +1,42 @@
+```jsx
+import React from 'react';
+
+const BigAnimatedElement = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-900 overflow-hidden relative">
+      <div
+        className="
+          absolute
+          w-96 h-96 sm:w-[500px] sm:h-[500px] md:w-[600px] md:h-[600px]
+          bg-purple-500
+          rounded-3xl
+          animate-ping
+          opacity-75
+          duration-1000
+        "
+      ></div>
+
+      <div
+        className="
+          relative z-10
+          w-96 h-96 sm:w-[500px] sm:h-[500px] md:w-[600px] md:h-[600px]
+          bg-gradient-to-br from-indigo-600 to-purple-800
+          rounded-3xl
+          shadow-2xl
+          flex items-center justify-center
+          text-white text-5xl font-extrabold tracking-wider text-center
+          transform
+          animate-bounce
+          animate-pulse
+          transition-all duration-300 ease-in-out
+          hover:scale-105 hover:rotate-3
+        "
+      >
+        BIG <br /> ANIMATION
+      </div>
+    </div>
+  );
+};
+
+export default BigAnimatedElement;
+```

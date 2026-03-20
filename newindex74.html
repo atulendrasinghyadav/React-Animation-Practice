@@ -1,0 +1,37 @@
+```jsx
+import React from 'react';
+
+function BigAnimatedSquare() {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 p-4 overflow-hidden">
+      <div
+        className="
+          relative
+          w-72 h-72 /* Base size for smaller screens */
+          sm:w-96 sm:h-96 /* Medium screens */
+          md:w-[30rem] md:h-[30rem] /* Larger screens */
+          lg:w-[40rem] lg:h-[40rem] /* Even larger screens */
+          xl:w-[50rem] xl:h-[50rem] /* Extra large screens */
+
+          bg-gradient-to-br from-pink-500 via-purple-600 to-indigo-700
+          rounded-3xl /* Smooth rounded corners */
+          shadow-2xl /* Deep shadow for visual depth */
+          transform /* Enable CSS transformations */
+          animate-spin /* Tailwind's built-in continuous spin animation */
+          origin-center /* Ensures the spin happens from the element's center */
+
+          flex items-center justify-center /* Center content inside the square */
+          text-white text-6xl md:text-8xl lg:text-9xl font-extrabold /* Large, bold text */
+          select-none /* Prevent text selection for a cleaner look */
+          drop-shadow-lg /* Adds a subtle shadow to the text */
+        "
+      >
+        <div className="absolute inset-0 bg-white opacity-10 rounded-3xl"></div> {/* Subtle inner highlight/glow effect */}
+        REACT
+      </div>
+    </div>
+  );
+}
+
+export default BigAnimatedSquare;
+```

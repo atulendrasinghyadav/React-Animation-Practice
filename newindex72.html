@@ -1,0 +1,40 @@
+```jsx
+import React from 'react';
+
+const AnimatedBlob = () => {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden relative">
+      <div className="relative w-96 h-96">
+        <div
+          className="
+            absolute
+            inset-0
+            w-full h-full
+            rounded-full
+            bg-gradient-to-br from-purple-500 to-pink-500
+            mix-blend-screen
+            animate-[spin_10s_linear_infinite,pulse_4s_ease-in-out_infinite_alternate]
+            origin-center
+            opacity-70
+          "
+        ></div>
+        <div
+          className="
+            absolute
+            inset-0
+            w-full h-full
+            rounded-full
+            bg-gradient-to-br from-blue-400 to-green-400
+            mix-blend-screen
+            animate-[spin_12s_reverse_linear_infinite,pulse_3s_ease-in-out_infinite_alternate]
+            origin-center
+            opacity-70
+          "
+        ></div>
+      </div>
+    </div>
+  );
+};
+
+export default AnimatedBlob;
+```

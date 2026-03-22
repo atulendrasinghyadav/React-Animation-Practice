@@ -1,0 +1,19 @@
+```jsx
+import React from 'react';
+
+const BigAnimatedElement = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-900 overflow-hidden">
+      <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] xl:w-[700px] xl:h-[700px]">
+        <span className="sr-only">Big Animated Element</span>
+        <div className="absolute inset-0 rounded-full bg-purple-500 opacity-75 animate-ping"></div>
+        <div className="absolute inset-0 rounded-full bg-purple-600 flex items-center justify-center text-white text-5xl sm:text-6xl md:text-7xl font-extrabold shadow-lg">
+          BIG
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BigAnimatedElement;
+```

@@ -1,0 +1,41 @@
+```jsx
+import React from 'react';
+
+const BigAnimatedComponent = () => {
+  return (
+    <div className="relative flex items-center justify-center min-h-screen bg-gray-900 overflow-hidden">
+
+      {/* Background pulsing ripple effect (slightly larger than main element) */}
+      <div className="absolute
+                      w-[calc(100vw-8rem)] h-[calc(100vw-8rem)] max-w-[1000px] max-h-[1000px]
+                      md:w-[850px] md:h-[850px] lg:w-[1050px] lg:h-[1050px] xl:w-[1250px] xl:h-[1250px]
+                      bg-indigo-500 rounded-full opacity-10 animate-ping"></div>
+
+      {/* Main animated element */}
+      <div
+        className="
+          relative
+          z-10
+          w-[calc(100vw-10rem)] h-[calc(100vw-10rem)] max-w-[900px] max-h-[900px]
+          md:w-[800px] md:h-[800px] lg:w-[1000px] lg:h-[1000px] xl:w-[1200px] xl:h-[1200px]
+          bg-gradient-to-br from-purple-600 to-indigo-800
+          rounded-full
+          flex items-center justify-center
+          text-white text-5xl md:text-7xl lg:text-8xl font-extrabold
+          shadow-2xl shadow-purple-500/50
+          animate-pulse
+          transform transition-all duration-500 ease-in-out
+          group
+        "
+      >
+        <span className="relative z-10 select-none">
+          WOW
+        </span>
+        <div className="absolute inset-0 bg-white rounded-full opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+      </div>
+    </div>
+  );
+};
+
+export default BigAnimatedComponent;
+```

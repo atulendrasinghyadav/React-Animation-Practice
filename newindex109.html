@@ -1,0 +1,30 @@
+```jsx
+import React from 'react';
+
+const BigAnimation = () => {
+  const gridSize = 10; // Number of elements per row/column
+  const elements = Array.from({ length: gridSize * gridSize });
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 flex items-center justify-center p-4 overflow-hidden">
+      <div className="relative w-full max-w-4xl h-full flex items-center justify-center">
+        <div className="grid gap-3" style={{ gridTemplateColumns: `repeat(${gridSize}, minmax(0, 1fr))` }}>
+          {elements.map((_, i) => (
+            <div
+              key={i}
+              className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-tr from-blue-400 to-purple-600 rounded-xl shadow-xl animate-pulse transform hover:scale-110 transition-transform duration-300"
+              style={{
+                animationDelay: `${i * 0.07}s`,
+                animationDuration: '2s',
+                animationTimingFunction: 'ease-in-out'
+              }}
+            ></div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BigAnimation;
+```

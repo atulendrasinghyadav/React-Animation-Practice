@@ -1,0 +1,64 @@
+```jsx
+import React from 'react';
+
+const BigAnimatedSquare = () => {
+  return (
+    <>
+      <style>
+        {`
+          @keyframes bigPulseRotateColor {
+            0% {
+              transform: scale(0.9) rotate(0deg);
+              background-color: #4F46E5; /* indigo-600 */
+              box-shadow: 0 0 15px rgba(79, 70, 229, 0.4);
+            }
+            25% {
+              transform: scale(1.05) rotate(7deg);
+              background-color: #6366F1; /* indigo-500 */
+              box-shadow: 0 0 25px rgba(99, 102, 241, 0.6);
+            }
+            50% {
+              transform: scale(1.1) rotate(0deg);
+              background-color: #818CF8; /* indigo-400 */
+              box-shadow: 0 0 40px rgba(129, 140, 248, 0.8);
+            }
+            75% {
+              transform: scale(1.05) rotate(-7deg);
+              background-color: #6366F1; /* indigo-500 */
+              box-shadow: 0 0 25px rgba(99, 102, 241, 0.6);
+            }
+            100% {
+              transform: scale(0.9) rotate(0deg);
+              background-color: #4F46E5; /* indigo-600 */
+              box-shadow: 0 0 15px rgba(79, 70, 229, 0.4);
+            }
+          }
+          .animate-big-custom {
+            animation: bigPulseRotateColor 5s ease-in-out infinite;
+          }
+        `}
+      </style>
+      <div className="
+        flex items-center justify-center
+        min-h-screen
+        bg-gray-900
+        overflow-hidden
+      ">
+        <div className="
+          w-[30rem] h-[30rem]
+          lg:w-[40rem] lg:h-[40rem]
+          rounded-3xl
+          flex items-center justify-center
+          text-white text-5xl lg:text-7xl font-extrabold
+          transition-all duration-300
+          animate-big-custom
+        ">
+          REACT ANIMATION
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default BigAnimatedSquare;
+```

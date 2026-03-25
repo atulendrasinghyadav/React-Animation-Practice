@@ -1,0 +1,28 @@
+```jsx
+import React from 'react';
+
+function BigAnimatedSquare() {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-900 p-8">
+      <div
+        className="
+          relative
+          w-96 h-96
+          bg-gradient-to-br from-fuchsia-500 via-purple-600 to-indigo-700
+          rounded-3xl
+          shadow-2xl shadow-purple-500/50
+          transform-gpu
+          animate-spin animate-pulse
+          origin-center
+        "
+      >
+        <div className="absolute inset-4 bg-white/10 rounded-2xl flex items-center justify-center text-white text-4xl font-bold">
+          ✨
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default BigAnimatedSquare;
+```

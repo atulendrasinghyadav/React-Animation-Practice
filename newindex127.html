@@ -1,0 +1,30 @@
+```jsx
+import React from 'react';
+
+function BigAnimation() {
+  return (
+    <div className="flex justify-center items-center h-screen bg-gray-900 overflow-hidden">
+      <div
+        className="
+          w-[600px] h-[600px]
+          bg-gradient-to-br from-purple-600 to-pink-500
+          rounded-full
+          shadow-2xl
+          flex justify-center items-center
+          text-white text-8xl font-extrabold
+          animate-[pulse_3s_ease-in-out_infinite]
+          animate-[spin_10s_linear_infinite]
+          transform transition-all duration-300
+          hover:scale-105 hover:shadow-3xl
+        "
+      >
+        <span className="block transform hover:rotate-6 transition-transform duration-300">
+          REACT
+        </span>
+      </div>
+    </div>
+  );
+}
+
+export default BigAnimation;
+```

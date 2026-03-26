@@ -1,0 +1,25 @@
+```jsx
+import React from 'react';
+
+function App() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-black overflow-hidden">
+      <div className="relative w-96 h-96 md:w-[30rem] md:h-[30rem] lg:w-[40rem] lg:h-[40rem]">
+        <span
+          className="absolute block h-full w-full rounded-full bg-purple-500 opacity-75 animate-ping"
+          style={{ animationDuration: '2.5s', animationIterationCount: 'infinite' }}
+        ></span>
+        <span
+          className="absolute block h-full w-full rounded-full bg-indigo-500 opacity-75 animate-ping delay-500"
+          style={{ animationDuration: '2.5s', animationIterationCount: 'infinite' }}
+        ></span>
+        <div className="relative flex items-center justify-center h-full w-full rounded-full bg-gradient-to-tr from-purple-600 to-indigo-700 text-white text-6xl md:text-7xl lg:text-8xl font-extrabold shadow-2xl animate-pulse">
+          BIG
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+```

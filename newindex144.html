@@ -1,0 +1,36 @@
+```jsx
+import React, { useState, useEffect } from 'react';
+
+function BigAnimation() {
+  const [isBig, setIsBig] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsBig((prev) => !prev);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const animationClasses = isBig
+    ? 'scale-110 bg-gradient-to-br from-blue-500 to-indigo-700 shadow-3xl'
+    : 'scale-90 bg-gradient-to-br from-purple-500 to-pink-700 shadow-2xl';
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden">
+      <div
+        className={`
+          w-[600px] h-[600px] 
+          rounded-full 
+          transition-all 
+          duration-1000 
+          ease-in-out 
+          ${animationClasses}
+        `}
+      ></div>
+    </div>
+  );
+}
+
+export default BigAnimation;
+```

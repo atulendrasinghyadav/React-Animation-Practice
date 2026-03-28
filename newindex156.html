@@ -1,0 +1,27 @@
+```jsx
+import React from 'react';
+
+const BigAnimation = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-900 relative overflow-hidden">
+      {/* Pulsating background element */}
+      <div className="
+        absolute w-96 h-96 rounded-full bg-gradient-to-br from-purple-600 to-indigo-700
+        animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite] opacity-75
+      "></div>
+
+      {/* Main rotating element */}
+      <div className="
+        relative z-10 w-64 h-64 bg-gradient-to-tr from-cyan-400 to-blue-600
+        rounded-2xl flex items-center justify-center
+        text-white text-4xl font-extrabold shadow-2xl
+        animate-[spin_4s_linear_infinite]
+      ">
+        WOW
+      </div>
+    </div>
+  );
+};
+
+export default BigAnimation;
+```

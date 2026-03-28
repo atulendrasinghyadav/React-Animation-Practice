@@ -1,0 +1,21 @@
+```jsx
+import React from 'react';
+
+function BigAnimatedCircle() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center">
+      <div className="relative w-96 h-96">
+        {/* Outer expanding ripple animation */}
+        <div className="absolute inset-0 bg-blue-600 rounded-full animate-ping opacity-75"></div>
+
+        {/* Main pulsing core with text */}
+        <div className="absolute inset-0 bg-blue-800 rounded-full flex items-center justify-center text-white text-6xl font-extrabold animate-pulse">
+          BIG
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default BigAnimatedCircle;
+```

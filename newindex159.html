@@ -1,0 +1,37 @@
+```jsx
+import React from 'react';
+
+function App() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden p-4">
+      <div className="relative flex items-center justify-center
+                      w-64 h-64 md:w-96 md:h-96 lg:w-[32rem] lg:h-[32rem] xl:w-[40rem] xl:h-[40rem]">
+
+        {/* Outer pulsating ring 1 */}
+        <span className="absolute h-full w-full rounded-full
+                         bg-purple-500 opacity-40 animate-ping"></span>
+
+        {/* Outer pulsating ring 2 (slightly delayed) */}
+        <span className="absolute h-full w-full rounded-full
+                         bg-pink-500 opacity-40 animate-ping"
+              style={{ animationDelay: '0.5s' }}></span>
+
+        {/* The main animated element */}
+        <div className="relative
+                        w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[28rem] xl:h-[28rem]
+                        rounded-full
+                        bg-gradient-to-br from-blue-400 to-green-500
+                        shadow-lg shadow-blue-500/50
+                        flex items-center justify-center
+                        text-white text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight
+                        animate-pulse animate-bounce
+                        z-10">
+          BIG!
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+```

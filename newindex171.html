@@ -1,0 +1,37 @@
+```jsx
+import React from 'react';
+
+const BigAnimation = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 to-black overflow-hidden p-4">
+      {/* Main container for the animated structure */}
+      <div className="relative w-80 h-80 sm:w-96 sm:h-96 md:w-[450px] md:h-[450px] lg:w-[600px] lg:h-[600px] flex items-center justify-center">
+        
+        {/* Outermost expanding ring 1 */}
+        <div className="absolute inset-0 rounded-full bg-blue-500 opacity-50 animate-ping [animation-delay:-1.5s]"></div>
+        
+        {/* Outermost expanding ring 2, slightly delayed */}
+        <div className="absolute inset-0 rounded-full bg-purple-500 opacity-50 animate-ping [animation-delay:-1s]"></div>
+        
+        {/* Outermost expanding ring 3, slightly delayed */}
+        <div className="absolute inset-0 rounded-full bg-pink-500 opacity-50 animate-ping [animation-delay:-0.5s]"></div>
+        
+        {/* Core pulsating and spinning element */}
+        <div className="absolute inset-10 sm:inset-12 md:inset-16 lg:inset-20 flex items-center justify-center rounded-full 
+                      bg-gradient-to-br from-indigo-600 to-pink-700 shadow-2xl 
+                      text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold 
+                      animate-pulse duration-[3000ms] animate-spin duration-[8000ms]">
+          <span className="relative z-10 tracking-widest">
+            BIG
+          </span>
+          {/* Inner reflective light effect, pulsing in sync but with different opacity */}
+          <div className="absolute inset-0 rounded-full bg-white opacity-20 animate-pulse duration-[3000ms]"></div>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+export default BigAnimation;
+```

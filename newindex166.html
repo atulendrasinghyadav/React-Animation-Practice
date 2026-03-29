@@ -1,0 +1,22 @@
+```jsx
+import React from 'react';
+
+function BigAnimation() {
+  return (
+    <div className="relative flex h-screen w-screen items-center justify-center bg-gradient-to-br from-gray-900 to-blue-900 overflow-hidden">
+      {/* Outer pulsating circle */}
+      <div className="absolute h-[700px] w-[700px] rounded-full bg-indigo-500 opacity-20 animate-ping"></div>
+      
+      {/* Middle pulsating circle */}
+      <div className="absolute h-[500px] w-[500px] rounded-full bg-indigo-400 opacity-40 animate-ping"></div>
+
+      {/* Inner, visible core element */}
+      <div className="relative h-[300px] w-[300px] rounded-full bg-indigo-600 flex items-center justify-center text-white text-5xl font-extrabold shadow-xl">
+        BIG!
+      </div>
+    </div>
+  );
+}
+
+export default BigAnimation;
+```

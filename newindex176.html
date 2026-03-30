@@ -1,0 +1,18 @@
+```jsx
+import React from 'react';
+
+function BigPulsingAnimation() {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-900">
+      <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-purple-600 to-indigo-700 rounded-full flex items-center justify-center animate-pulse shadow-2xl">
+        <span className="text-white text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-wide uppercase">
+          BIG
+        </span>
+        <div className="absolute inset-0 rounded-full border-4 border-white border-opacity-20 animate-pulse delay-75"></div>
+      </div>
+    </div>
+  );
+}
+
+export default BigPulsingAnimation;
+```

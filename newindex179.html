@@ -1,0 +1,40 @@
+```jsx
+import React, { useState, useEffect } from 'react';
+
+function App() {
+  const [isScaled, setIsScaled] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsScaled(prev => !prev);
+    }, 1800); // Toggle every 1.8 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-indigo-900 overflow-hidden p-4">
+      <div
+        className={`
+          w-80 h-80 sm:w-96 sm:h-96 md:w-[600px] md:h-[600px]
+          bg-gradient-to-br from-purple-600 to-pink-500
+          rounded-3xl shadow-glow-lg
+          flex items-center justify-center
+          text-white font-extrabold text-5xl md:text-8xl
+          transition-all duration-1000 ease-in-out transform
+          ${isScaled ? 'scale-110 rotate-6 translate-y-2' : 'scale-90 -rotate-6 -translate-y-2'}
+        `}
+        style={{
+          boxShadow: '0 0 40px rgba(236, 72, 153, 0.7), 0 0 80px rgba(139, 92, 246, 0.5)'
+        }}
+      >
+        <span className="relative inline-block animate-pulse-fast">
+          BIG!
+        </span>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+```

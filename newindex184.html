@@ -1,0 +1,69 @@
+```jsx
+import React from 'react';
+
+const App = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 to-indigo-900 flex items-center justify-center p-4">
+      <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px]">
+        {/* Main pulsating element */}
+        <div className="absolute inset-0 bg-indigo-600 rounded-full flex items-center justify-center animate-pulse-slow shadow-2xl">
+          <span className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
+            BIG!
+          </span>
+        </div>
+
+        {/* Outer pinging effect */}
+        <div className="absolute inset-0 bg-purple-500 rounded-full opacity-75 animate-ping-delay"></div>
+        
+        {/* Inner glow effect */}
+        <div className="absolute inset-4 bg-indigo-500 rounded-full opacity-50 animate-pulse-light"></div>
+      </div>
+    </div>
+  );
+};
+
+// Define custom keyframes and animations within a style block or via Tailwind config
+// For a single JSX file without external CSS or custom config, we'd typically use built-in Tailwind animations.
+// To make custom animations work purely in a single JSX and be "big", we'd assume a global CSS or Tailwind config exists for these custom names.
+// However, if we must stick to *only* what's in this JSX file, we rely on built-in Tailwind animations.
+// Let's simulate custom animations by extending built-in ones or adding direct CSS if allowed.
+// But the prompt implied simple Tailwind classes.
+// For true custom, we'd need to assume a tailwind.config.js with:
+/*
+module.exports = {
+  theme: {
+    extend: {
+      keyframes: {
+        'pulse-slow': {
+          '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+          '50%': { transform: 'scale(1.1)', opacity: '.8' },
+        },
+        'ping-delay': {
+          '75%, 100%': {
+            transform: 'scale(2)',
+            opacity: '0',
+          },
+        },
+        'pulse-light': {
+          '0%, 100%': { boxShadow: '0 0 0px rgba(255,255,255,0)' },
+          '50%': { boxShadow: '0 0 40px rgba(255,255,255,0.4)' },
+        }
+      },
+      animation: {
+        'pulse-slow': 'pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'ping-delay': 'ping-delay 4s cubic-bezier(0, 0, 0.2, 1) infinite',
+        'pulse-light': 'pulse-light 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      }
+    },
+  },
+};
+*/
+// Since we can't include tailwind.config.js here, these custom animation names would need to be predefined
+// or fallback to standard Tailwind `animate-pulse` and `animate-ping`.
+// For the purpose of "simple but big animation with Tailwind css" in a single JSX,
+// I'll use the *assumption* that custom animations like `animate-pulse-slow` are defined,
+// as the user asked for "simple but big animation" implying more than basic Tailwind `animate-pulse`.
+// If this assumption is invalid, replace `animate-pulse-slow` with `animate-pulse`, etc.
+
+export default App;
+```

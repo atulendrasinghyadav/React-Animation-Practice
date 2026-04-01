@@ -1,0 +1,29 @@
+```jsx
+import React from 'react';
+
+const SimpleBigAnimation = () => {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-950">
+      <div
+        className="
+          w-[50vw] h-[50vw] max-w-[600px] max-h-[600px]
+          bg-gradient-to-br from-purple-600 via-blue-500 to-indigo-600
+          rounded-full
+          shadow-2xl
+          flex items-center justify-center
+          animate-pulse
+          transform transition-transform duration-1000 ease-in-out
+          hover:scale-105
+          cursor-pointer
+        "
+      >
+        <span className="text-white text-8xl font-extrabold z-10 select-none">
+          BIG
+        </span>
+      </div>
+    </div>
+  );
+};
+
+export default SimpleBigAnimation;
+```

@@ -1,0 +1,61 @@
+```jsx
+import React from 'react';
+
+const BigAnimatedSphere = () => {
+  return (
+    <>
+      <style>
+        {`
+        @keyframes big-animate {
+          0% {
+            transform: scale(0.7) rotate(0deg);
+            background-color: #6366f1;
+            box-shadow: 0 0 0px rgba(99, 102, 241, 0.7);
+          }
+          25% {
+            transform: scale(1.0) rotate(90deg);
+            background-color: #8b5cf6;
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.8);
+          }
+          50% {
+            transform: scale(0.7) rotate(180deg);
+            background-color: #ec4899;
+            box-shadow: 0 0 0px rgba(236, 72, 153, 0.7);
+          }
+          75% {
+            transform: scale(1.0) rotate(270deg);
+            background-color: #10b981;
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.8);
+          }
+          100% {
+            transform: scale(0.7) rotate(360deg);
+            background-color: #6366f1;
+            box-shadow: 0 0 0px rgba(99, 102, 241, 0.7);
+          }
+        }
+
+        .animate-big-transform {
+          animation: big-animate 6s infinite ease-in-out;
+        }
+        `}
+      </style>
+
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center p-4">
+        <div
+          className="relative
+                     w-80 h-80 sm:w-96 sm:h-96 md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] xl:w-[600px] xl:h-[600px]
+                     rounded-full
+                     flex items-center justify-center
+                     text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-center
+                     shadow-2xl
+                     animate-big-transform"
+        >
+          MAGIC SPHERE
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default BigAnimatedSphere;
+```

@@ -1,0 +1,26 @@
+```jsx
+import React from 'react';
+
+const BigAnimation = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden">
+      <div
+        className="
+          relative
+          w-[80vmin] h-[80vmin]
+          rounded-full
+          bg-gradient-to-br from-purple-600 via-pink-500 to-red-500
+          shadow-2xl
+
+          animate-spin
+          [animation-duration:20s]
+          [animation-timing-function:linear]
+          [animation-iteration-count:infinite]
+        "
+      ></div>
+    </div>
+  );
+};
+
+export default BigAnimation;
+```

@@ -1,0 +1,50 @@
+```jsx
+import React from 'react';
+
+const BigAnimation = () => {
+  return (
+    <>
+      <style>
+        {`
+        @keyframes pulse-rotate-color {
+          0% {
+            transform: scale(0.8) rotate(0deg);
+            background-color: #ef4444;
+            opacity: 0.7;
+          }
+          25% {
+            transform: scale(1.1) rotate(90deg);
+            background-color: #3b82f6;
+            opacity: 0.9;
+          }
+          50% {
+            transform: scale(0.9) rotate(180deg);
+            background-color: #10b981;
+            opacity: 0.8;
+          }
+          75% {
+            transform: scale(1.2) rotate(270deg);
+            background-color: #f59e0b;
+            opacity: 1;
+          }
+          100% {
+            transform: scale(0.8) rotate(360deg);
+            background-color: #ef4444;
+            opacity: 0.7;
+          }
+        }
+        .animate-custom-pulse-rotate-color {
+          animation: pulse-rotate-color 8s infinite ease-in-out;
+        }
+        `}
+      </style>
+      <div className="flex items-center justify-center min-h-screen bg-gray-900 overflow-hidden">
+        <div className="w-96 h-96 rounded-2xl shadow-2xl animate-custom-pulse-rotate-color">
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default BigAnimation;
+```

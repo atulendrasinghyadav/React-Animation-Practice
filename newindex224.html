@@ -1,0 +1,51 @@
+```jsx
+import React from 'react';
+
+function BigAnimation() {
+  return (
+    <>
+      <style>
+        {`
+          @keyframes bigPulse {
+            0% {
+              transform: scale(1) rotate(0deg);
+              background-color: #ef4444; /* red-500 */
+              box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); /* red-500 with alpha */
+            }
+            25% {
+              transform: scale(1.2) rotate(15deg);
+              background-color: #f59e0b; /* amber-500 */
+              box-shadow: 0 0 30px 10px rgba(245, 158, 11, 0.8); /* amber-500 with alpha */
+            }
+            50% {
+              transform: scale(1.4) rotate(0deg);
+              background-color: #10b981; /* emerald-500 */
+              box-shadow: 0 0 60px 20px rgba(16, 185, 129, 0.9); /* emerald-500 with alpha */
+            }
+            75% {
+              transform: scale(1.2) rotate(-15deg);
+              background-color: #3b82f6; /* blue-500 */
+              box-shadow: 0 0 30px 10px rgba(59, 130, 246, 0.8); /* blue-500 with alpha */
+            }
+            100% {
+              transform: scale(1) rotate(0deg);
+              background-color: #ef4444; /* red-500 */
+              box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); /* red-500 with alpha */
+            }
+          }
+          .animate-big-pulse {
+            animation: bigPulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          }
+        `}
+      </style>
+      <div className="flex items-center justify-center min-h-screen bg-gray-900 overflow-hidden">
+        <div className="w-80 h-80 sm:w-96 sm:h-96 bg-red-500 rounded-2xl flex items-center justify-center text-white text-5xl sm:text-7xl font-extrabold shadow-xl animate-big-pulse will-change-transform">
+          WOW!
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default BigAnimation;
+```

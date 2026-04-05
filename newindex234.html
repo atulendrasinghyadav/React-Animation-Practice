@@ -1,0 +1,68 @@
+```jsx
+import React from 'react';
+
+function BigAnimation() {
+  return (
+    <div className="relative flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-950 via-indigo-950 to-purple-950 overflow-hidden">
+      <style>
+        {`
+          @keyframes pulse-scale-grow {
+            0%, 100% {
+              transform: scale(1);
+              opacity: 0.7;
+            }
+            50% {
+              transform: scale(1.1);
+              opacity: 1;
+            }
+          }
+
+          @keyframes ripple-spread {
+            0% {
+              transform: scale(0.5);
+              opacity: 1;
+            }
+            100% {
+              transform: scale(2.5);
+              opacity: 0;
+            }
+          }
+
+          .animate-pulse-scale-grow {
+            animation: pulse-scale-grow 3s ease-in-out infinite;
+          }
+
+          .animate-ripple-spread-slow {
+            animation: ripple-spread 4s ease-out infinite;
+          }
+
+          .animate-ripple-spread-medium {
+            animation: ripple-spread 4s ease-out infinite 1s; /* Staggered start */
+          }
+
+          .animate-ripple-spread-fast {
+            animation: ripple-spread 4s ease-out infinite 2s; /* Staggered start */
+          }
+        `}
+      </style>
+
+      {/* Central Pulsating Core */}
+      <div className="relative w-64 h-64 rounded-full bg-gradient-to-br from-indigo-600 to-purple-700 flex items-center justify-center shadow-2xl animate-pulse-scale-grow z-10">
+        <div className="text-white text-5xl font-extrabold tracking-wider opacity-90">BIG</div>
+      </div>
+
+      {/* Expanding Ripple Rings */}
+      <div className="absolute w-64 h-64 rounded-full border-4 border-indigo-400 animate-ripple-spread-slow"></div>
+      <div className="absolute w-64 h-64 rounded-full border-4 border-purple-400 animate-ripple-spread-medium"></div>
+      <div className="absolute w-64 h-64 rounded-full border-4 border-pink-300 animate-ripple-spread-fast"></div>
+      
+      {/* Larger, fainter ripples for background depth */}
+      <div className="absolute w-80 h-80 rounded-full border border-indigo-600 animate-ripple-spread-fast opacity-30"></div>
+      <div className="absolute w-96 h-96 rounded-full border border-purple-500 animate-ripple-spread-slow opacity-20"></div>
+      <div className="absolute w-[30rem] h-[30rem] rounded-full border border-pink-400 animate-ripple-spread-medium opacity-10"></div>
+    </div>
+  );
+}
+
+export default BigAnimation;
+```

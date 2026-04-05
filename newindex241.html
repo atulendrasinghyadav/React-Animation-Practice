@@ -1,0 +1,31 @@
+```jsx
+import React from 'react';
+
+const BigAnimation = () => {
+  const numRows = 15;
+  const numCols = 10;
+  const totalElements = numRows * numCols;
+
+  return (
+    <div className="relative w-screen h-screen overflow-hidden bg-gray-900 flex items-center justify-center">
+      <div className="grid grid-cols-10 gap-1 p-4 max-w-full max-h-full">
+        {Array.from({ length: totalElements }).map((_, index) => {
+          const row = Math.floor(index / numCols);
+          const col = index % numCols;
+          const delay = (row * 0.1 + col * 0.05).toFixed(2); // Creates a wave-like delay effect
+
+          return (
+            <div
+              key={index}
+              className="w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg animate-pulse"
+              style={{ animationDelay: `${delay}s` }}
+            ></div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default BigAnimation;
+```

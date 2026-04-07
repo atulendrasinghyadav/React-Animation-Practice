@@ -1,0 +1,27 @@
+```jsx
+import React from 'react';
+
+const BigAnimation = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-900 overflow-hidden relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-800 via-indigo-900 to-black animate-pulse opacity-50"></div>
+
+      <div className="relative w-96 h-96 sm:w-[500px] sm:h-[500px] lg:w-[700px] lg:h-[700px] 
+                      bg-white rounded-full shadow-2xl 
+                      flex items-center justify-center overflow-hidden
+                      transform transition-all duration-500 ease-in-out hover:scale-105">
+        
+        <div className="absolute inset-0 border-8 border-indigo-400 rounded-full animate-spin"></div>
+        
+        <div className="w-64 h-64 sm:w-96 sm:h-96 lg:w-[500px] lg:h-[500px] 
+                        bg-gradient-to-tr from-pink-500 to-red-500 rounded-lg shadow-xl 
+                        animate-pulse flex items-center justify-center">
+          <div className="w-24 h-24 sm:w-32 sm:h-32 bg-yellow-300 rounded-full animate-bounce"></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BigAnimation;
+```
